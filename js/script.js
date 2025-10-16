@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'outfit1', name: 'Outfit 1' },
         { id: 'outfit2', name: 'Outfit 2' },
         { id: 'outfit3', name: 'Outfit 3' },
-        { id: 'outfit4', name: 'Outfit 4' }
+        { id: 'outfit4', name: 'Outfit 4' },
+        { id: 'outfit5', name: 'Outfit 5' },
+        { id: 'outfit6', name: 'Outfit 6' }
     ];
 
     // DOM Elements
