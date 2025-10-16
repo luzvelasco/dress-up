@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy birthday!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="display-area">
+            <!-- <h2>idk maybe nothing here</h2> -->
+            <div class="character-display">
+                <div class="character-base">
+                    <div class="body-layer" id="body-display"></div>
+                    <div class="outfit-layer" id="outfit-display"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="selection-area">
+            <div class="tabs">
+                <div class="tab active" data-tab="body">Body</div>
+                <div class="tab" data-tab="outfit">Outfits</div>
+                <div class="tab" data-tab="card">Bday Card</div>
+            </div>
+
+            <!-- Body Tab Content -->
+            <div class="tab-content active" id="body-content">
+                <!-- <h3 class="section-title">Body Options</h3> -->
+                <div class="options-grid" id="body-options">
+                    <!-- Body options will be populated by JavaScript -->
+                </div>
+                <!-- <div class="action-buttons">
+                    <button class="btn btn-secondary" id="resetBodyBtn">
+                        <i class="fas fa-undo"></i> Reset Body
+                        DELETE LATER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11
+                    </button>
+                </div> -->
+            </div>
+
+            <!-- Outfit Tab Content -->
+            <div class="tab-content" id="outfit-content">
+                <!-- <h3 class="section-title">Outfit Options</h3> -->
+                <div class="options-grid" id="outfit-options">
+                    <!-- Outfit options will be populated by JavaScript -->
+                </div>
+                <!-- <div class="action-buttons">
+                    <button class="btn btn-secondary" id="resetOutfitBtn">
+                        <i class="fas fa-undo"></i> Reset Outfit
+                        DETELETE LATER !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    </button>
+                </div> -->
+            </div>
+
+            <!-- Birthday Card Tab Content -->
+            <div class="tab-content" id="card-content">
+                <div class="birthday-content">
+                    <div class="birthday-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <p class="birthday-text">
+                        Hiiii of course as always I did a little birthday letter as well. Password is the name of our
+                        commune lol
+                    </p>
+                    <button class="btn btn-primary" id="openCardBtn">
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Birthday Card Popup -->
+    <div class="popup-overlay" id="cardPopup">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <div class="birthday-message">
+                <p>Password:</p>
+                <form id="passwordForm">
+                    <input type="password" id="passwordInput" placeholder="Enter password" required>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <div id="cardLinkContainer"></div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+</body>
+
+</html>
