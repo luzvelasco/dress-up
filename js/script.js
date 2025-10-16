@@ -50,8 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Set up event listeners
-        // resetBodyBtn.addEventListener('click', resetBody);
-        // resetOutfitBtn.addEventListener('click', resetOutfit);
         openCardBtn.addEventListener('click', openCardPopup);
         closePopup.addEventListener('click', closeCardPopup);
 
@@ -120,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Update display
             bodyDisplay.style.backgroundImage = `url('img/${id}.png')`;
-            // bodyDisplay.innerHTML = `<div style="display:flex; justify-content:center; align-items:center; height:100%; font-size:100px;">👤</div>`;
         } else if (type === 'outfit') {
             state.currentOutfit = id;
 
@@ -132,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Update display
             outfitDisplay.style.backgroundImage = `url('img/${id}.png')`;
-            // outfitDisplay.innerHTML = `<div style="display:flex; justify-content:center; align-items:center; height:100%; font-size:100px;">👕</div>`;
         }
     }
 
