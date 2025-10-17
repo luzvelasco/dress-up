@@ -344,3 +344,34 @@ body {
         height: 350px;
     }
 }
+
+@media (max-width: 820px) {
+    body {
+        align-items: flex-start; /* stop vertical centering */
+        overflow-y: auto; /* enable scrolling */
+    }
+
+    .container {
+        flex-direction: column; /* stack display + selection vertically */
+        height: auto; /* allow height to grow naturally */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .display-area, 
+    .selection-area {
+        padding: 20px;
+    }
+
+    .tab-content {
+        max-height: 400px; /* scroll only inside tabs */
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
