@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-family: "Roboto Mono", monospace; */
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 body {
-    /* background: linear-gradient(135deg, #dfafff 0%, #bd83e4 100%); */
     background: #dfbcf7;
     min-height: 100vh;
     display: flex;
@@ -23,7 +26,8 @@ body {
     height: 450px;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* CHANGE LATER */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* CHANGE LATER */
     overflow: hidden;
     transition: all 0.5s ease-in-out;
 }
@@ -37,7 +41,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #f8f9fa; /* DELETE LATER */
+    background: #f8f9fa;
+    /* DELETE LATER */
 }
 
 /* CHARACTER IMAGE */
@@ -46,7 +51,8 @@ body {
     height: 400px;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* DELETE LATER */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* DELETE LATER */
     position: relative;
     overflow: hidden;
     /* margin-bottom: 30px; */
@@ -113,7 +119,7 @@ body {
     flex-direction: column;
     height: 100%;
     overflow-y: auto;
-    padding-right: 10px; 
+    padding-right: 10px;
 }
 
 
@@ -200,12 +206,6 @@ body {
     justify-content: center;
 }
 
-/* .birthday-icon {
-    font-size: 4rem;
-    color: #FF6584;
-    margin-bottom: 20px;
-} */
-
 .birthday-pic img {
     width: 150px;
     height: 150px;
@@ -267,7 +267,6 @@ body {
 
 /* ---------------------- POP UP ---------------------  */
 
-/* Popup Styles */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -290,6 +289,9 @@ body {
     padding: 25px;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .close-btn {
@@ -336,16 +338,16 @@ body {
 
 #cardLinkContainer a {
     display: inline-block;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     color: #6C63FF;
     font-weight: bold;
     text-decoration: none;
+    text-align: center;
 }
 
 #cardLinkContainer a:hover {
     text-decoration: underline;
 }
-
 
 @media (max-width: 768px) {
     .container {
@@ -362,27 +364,32 @@ body {
     }
 }
 
-/* ----------------------- MOBILE FIXES BRUH -------------------------- */
+/* ----------------------- MOBILE FIX -------------------------- */
 @media (max-width: 820px) {
     body {
-        align-items: flex-start; /* stop vertical centering */
-        overflow-y: auto; /* enable scrolling */
+        align-items: flex-start;
+        /* stop vertical centering */
+        overflow-y: auto;
+        /* enable scrolling */
     }
 
     .container {
-        flex-direction: column; /* stack display + selection vertically */
-        height: auto; /* allow height to grow naturally */
+        flex-direction: column;
+        /* stack display + selection vertically */
+        height: auto;
+        /* allow height to grow naturally */
         margin-top: 20px;
         margin-bottom: 20px;
     }
 
-    .display-area, 
+    .display-area,
     .selection-area {
         padding: 20px;
     }
 
     .tab-content {
-        max-height: 400px; /* scroll only inside tabs */
+        max-height: 400px;
+        /* scroll only inside tabs */
         overflow-y: auto;
     }
 }

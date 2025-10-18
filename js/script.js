@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Game state
+    // default state
     const state = {
         currentBody: 'body1',
         currentOutfit: 'outfit1'
     };
 
-    // Image data - in a real implementation, these would be paths to your PNG files
+    // ----------------------------------- IMAGE SET UP -----------------------------------
+
+    // images
     const bodyOptions = [
         { id: 'body1', name: 'Body 1' },
         { id: 'body2', name: 'Body 2' },
@@ -19,41 +21,43 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'outfit3', name: 'Outfit 3' },
         { id: 'outfit4', name: 'Outfit 4' },
         { id: 'outfit5', name: 'Outfit 5' },
-        { id: 'outfit6', name: 'Outfit 6' }
+        { id: 'outfit6', name: 'Outfit 6' },
+        { id: 'outfit7', name: 'Outfit 7' }
     ];
 
-    // DOM Elements
+    // ----------------------------------- DOM Elements -----------------------------------
+
     const bodyOptionsContainer = document.getElementById('body-options');
     const outfitOptionsContainer = document.getElementById('outfit-options');
     const bodyDisplay = document.getElementById('body-display');
     const outfitDisplay = document.getElementById('outfit-display');
-    // const resetBodyBtn = document.getElementById('resetBodyBtn');
-    // const resetOutfitBtn = document.getElementById('resetOutfitBtn');
     const openCardBtn = document.getElementById('openCardBtn');
     const cardPopup = document.getElementById('cardPopup');
     const closePopup = document.getElementById('closePopup');
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    // Initialize the game
+    // ----------------------------------- GAME FUNCTIONS -----------------------------------
+
+    // start function
     function init() {
-        // Populate body options
+        // add available body options
         bodyOptions.forEach(body => {
             const optionElement = createOptionElement(body, 'body');
             bodyOptionsContainer.appendChild(optionElement);
         });
 
-        // Populate outfit options
+        // add available outfit options
         outfitOptions.forEach(outfit => {
             const optionElement = createOptionElement(outfit, 'outfit');
             outfitOptionsContainer.appendChild(optionElement);
         });
 
-        // Set up event listeners
+        // event listeners
         openCardBtn.addEventListener('click', openCardPopup);
         closePopup.addEventListener('click', closeCardPopup);
 
-        // Set up tab switching
+        // tab switching
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 const tabId = tab.dataset.tab;
@@ -61,14 +65,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // Set initial selection
+        // initial selection
         selectOption('body', 'body1');
         selectOption('outfit', 'outfit1');
     }
 
-    // Switch between tabs
+    // tab menu switch
     function switchTab(tabId) {
-        // Update active tab
+        // update content in active tab
         tabs.forEach(tab => {
             if (tab.dataset.tab === tabId) {
                 tab.classList.add('active');
@@ -77,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Show active tab content
+        // show content in active tab
         tabContents.forEach(content => {
             if (content.id === `${tabId}-content`) {
                 content.classList.add('active');
@@ -87,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Create option element
+    // add the available options to the menu
     function createOptionElement(item, type) {
         const option = document.createElement('div');
         option.className = 'option';
@@ -105,44 +109,45 @@ document.addEventListener('DOMContentLoaded', function () {
         return option;
     }
 
-    // Select an option
+    // select body/outfit options
     function selectOption(type, id) {
         if (type === 'body') {
             state.currentBody = id;
 
-            // Update UI
+            // selection hightlight
             document.querySelectorAll('.option[data-type="body"]').forEach(opt => {
                 opt.classList.remove('selected');
             });
             document.querySelector(`.option[data-type="body"][data-id="${id}"]`).classList.add('selected');
 
-            // Update display
+            // update display
             bodyDisplay.style.backgroundImage = `url('img/${id}.png')`;
         } else if (type === 'outfit') {
             state.currentOutfit = id;
 
-            // Update UI
+            // selection hightlight
             document.querySelectorAll('.option[data-type="outfit"]').forEach(opt => {
                 opt.classList.remove('selected');
             });
             document.querySelector(`.option[data-type="outfit"][data-id="${id}"]`).classList.add('selected');
 
-            // Update display
+            // update display
             outfitDisplay.style.backgroundImage = `url('img/${id}.png')`;
         }
     }
 
-    // Open birthday card popup
+    // ----------------------------------- CARD POPUP -----------------------------------
+
     function openCardPopup() {
         cardPopup.style.display = 'flex';
     }
 
-    // Close birthday card popup
     function closeCardPopup() {
         cardPopup.style.display = 'none';
     }
 
-    // Password form logic
+    // ----------------------------------- BIRTHDAY LETTER PROTECTED BY PASSWORD -----------------------------------
+
     const passwordForm = document.getElementById('passwordForm');
     const passwordInput = document.getElementById('passwordInput');
     const cardLinkContainer = document.getElementById('cardLinkContainer');
@@ -152,9 +157,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const enteredPassword = passwordInput.value.trim().toLowerCase();
 
         if (enteredPassword === 'begone geese') {
-            cardLinkContainer.innerHTML = `
-            <a href="https://docs.google.com/document/d/1jxNVXsPE1AxIzja_iLqUwRoKrNthy9MeAb68D2raDAI/edit?usp=sharing" target="_blank">here</a>
-        `;
+                cardLinkContainer.innerHTML = `
+                <a href="https://docs.google.com/document/d/e/2PACX-1vQZmI5qyt2eBnCshS2wXEwRyNFsr8K56HamL-dL726WkHXCU1jvi4GLHRIOyyrqx2P7JOriDvz78ThI/pub" target="_blank">here</a>
+            `;
         } else {
             alert('try with lowercase letters');
             passwordInput.value = '';
@@ -162,13 +167,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // Close popup when clicking outside content
+    // close popup when clicking outside content
     cardPopup.addEventListener('click', function (e) {
         if (e.target === cardPopup) {
             closeCardPopup();
         }
     });
 
-    // Initialize the game
+    // start the game
     init();
 });

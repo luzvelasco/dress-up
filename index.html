@@ -8,12 +8,17 @@
     <link rel="icon" type="image/png" href="img/logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <div class="display-area">
-            <!-- <h2>idk maybe nothing here</h2> -->
             <div class="character-display">
                 <div class="character-base">
                     <div class="body-layer" id="body-display"></div>
@@ -30,24 +35,20 @@
                 <div class="tab" data-tab="outfit">
                     <img src="img/fit.svg" alt="outfit" class="tab-icon">
                 </div>
-                <div class="tab" data-tab="card">                    
+                <div class="tab" data-tab="card">
                     <img src="img/card.png" alt="letter" class="tab-icon">
                 </div>
             </div>
 
             <!-- Body Tab Content -->
             <div class="tab-content active" id="body-content">
-                <!-- <h3 class="section-title">Body Options</h3> -->
                 <div class="options-grid" id="body-options">
-                    <!-- Body options will be populated by JavaScript -->
                 </div>
             </div>
 
             <!-- Outfit Tab Content -->
             <div class="tab-content" id="outfit-content">
-                <!-- <h3 class="section-title">Outfit Options</h3> -->
                 <div class="options-grid" id="outfit-options">
-                    <!-- Outfit options will be populated by JavaScript -->
                 </div>
             </div>
 
@@ -58,7 +59,7 @@
                         <img src="img/bday.gif" alt="lol">
                     </div>
                     <p class="birthday-text">
-                        Hiiii happy birthday!! of course as always I wrote you a little letter as well [:
+                        hiiii of course as always i wrote little letter for you as well [:
                     </p>
                     <button class="btn btn-primary" id="openCardBtn">
                         <i class="fas fa-envelope"></i>
@@ -78,11 +79,11 @@
                     <input type="password" id="passwordInput" placeholder="enter password" required>
                     <button type="submit" class="btn btn-primary">submit</button>
                 </form>
-                <div id="cardLinkContainer"></div>
             </div>
+            <div id="cardLinkContainer"></div>
         </div>
     </div>
-    
+
     <script src="js/script.js"></script>
 </body>
 
