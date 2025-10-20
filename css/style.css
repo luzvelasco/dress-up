@@ -10,7 +10,11 @@
 }
 
 body {
-    background: #dfbcf7;
+    /* background: #E0AAFF; */
+    /* background: #F4EFFA; */
+    background: #DEC9E9;
+    /* background: #C8B1E4; */
+    /* background: white; */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -26,7 +30,8 @@ body {
     height: 450px;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px #C19EE0;
+    /* border: #22223B solid 3px; */
     /* CHANGE LATER */
     overflow: hidden;
     transition: all 0.5s ease-in-out;
@@ -41,7 +46,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #f8f9fa;
+    background: white;
+    /* background: #F4EFFA; */
     /* DELETE LATER */
 }
 
@@ -51,7 +57,7 @@ body {
     height: 400px;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 5px 15px #C19EE0; */
     /* DELETE LATER */
     position: relative;
     overflow: hidden;
@@ -81,14 +87,16 @@ body {
 .selection-area {
     flex: 1;
     padding: 30px;
-    background: white;
+    background: #F4EFFA;
     display: flex;
     flex-direction: column;
 }
 
 .tabs {
     display: flex;
-    background: #f0f2f5;
+    /* background: #f0f2f5; */
+    /* background: #EAD6F5; */
+    background: #DED9E2;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 25px;
@@ -110,7 +118,8 @@ body {
 }
 
 .tab.active {
-    background: white;
+    /* background: white; */
+    background: #F7F4EA;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -134,12 +143,12 @@ body {
 }
 
 .tab-content::-webkit-scrollbar-thumb {
-    background-color: #c5b7ff;
+    background-color: #DED9E2;
     border-radius: 10px;
 }
 
 .tab-content::-webkit-scrollbar-thumb:hover {
-    background-color: #a495ff;
+    background-color: #c0b9dd;
 }
 
 .tab-content::-webkit-scrollbar-track {
@@ -166,7 +175,8 @@ body {
 
 .option {
     height: 120px;
-    background: #f0f2f5;
+    /* background: #ffffff; */
+    background: #DED9E2;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -183,7 +193,8 @@ body {
 }
 
 .option.selected {
-    border-color: #5a52e0;
+    border-color: #532B88;
+    /* border-color: #5E548E; */
 }
 
 .option img {
@@ -242,14 +253,16 @@ body {
 }
 
 .btn-primary {
-    background: #6C63FF;
+    /* background: #6247AA; */
+    background: #532B88;
     color: white;
     justify-self: center;
     margin-bottom: -10px;
 }
 
 .btn-primary:hover {
-    background: #5a52e0;
+    /* background: #453279; */
+    background: #2F184B;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
 }
